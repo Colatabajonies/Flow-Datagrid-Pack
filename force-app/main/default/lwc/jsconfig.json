@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+            "c/lWC_Datagrid": [
+                "lWC_Datagrid/lWC_Datagrid.js"
+            ],
+            "c/lWC_TilePicker": [
+                "lWC_TilePicker/lWC_TilePicker.js"
+            ],
+            "c/lWC_TimePicker": [
+                "lWC_TimePicker/lWC_TimePicker.js"
+            ]
+        }
+    },
+    "include": [
+        "**/*",
+        "../../../../.sfdx/typings/lwc/**/*.d.ts"
+    ],
+    "typeAcquisition": {
+        "include": [
+            "jest"
+        ]
+    }
+}

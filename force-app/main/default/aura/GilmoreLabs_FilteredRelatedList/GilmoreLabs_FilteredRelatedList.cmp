@@ -1,0 +1,37 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId,force:hasSObjectName" controller="GilmoreLabs_FilteredRelatedListCtrl" >
+    <aura:attribute name="sObjectName" type="String" />
+    <aura:attribute name="recordId" type="String" />
+    
+    
+    <aura:attribute name="strTitle" type="String" />
+    <aura:attribute name="iconName" type="String" />
+    <aura:attribute name="strFields" type="String" />
+    <aura:attribute name="strObjectLink" type="String" />
+    <aura:attribute name="strWhereClause" type="String" />
+    
+    <aura:attribute name="relatedObjectName" type="String" />
+    <aura:attribute name="relatedFieldAPIName" type="String" />
+    <aura:handler name="init" value="{! this }" action="{! c.doInit }"/>
+    
+    
+    <aura:attribute name="data" type="Object"/>
+    <aura:attribute name="columns" type="List"/>
+    <aura:attribute name="sortedBy" type="String"/>
+    <aura:attribute name="sortedDirection" type="String"/>
+    <aura:attribute name="defaultSortDirection" type="String"/>
+    
+    
+    <lightning:card iconName="{!v.iconName}" title="{!v.strTitle}"> 
+        <lightning:datatable
+                             aura:id="objTable"
+                             columns="{! v.columns }"
+                             data="{! v.data }"
+                             hideCheckboxColumn="true" 
+                             onrowaction="{! c.handleRowAction }"
+                             keyField="id"
+                             sortedBy="{!v.sortedBy}"
+                             sortedDirection="{!v.sortedDirection}"
+                             defaultSortDirection="{!v.defaultSortDirection }"
+                             onsort="{!c.handleColumnSorting}"
+                             /></lightning:card>
+</aura:component>

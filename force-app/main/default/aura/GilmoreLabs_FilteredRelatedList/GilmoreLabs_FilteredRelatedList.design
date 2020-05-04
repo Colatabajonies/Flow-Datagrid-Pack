@@ -1,0 +1,8 @@
+<design:component label="GilmoreLabs - Filtered Related List">
+    <design:attribute name="strTitle" label="Related List Title" />
+    <design:attribute name="iconName" label="Display Icon" description="This denotes the SLDS icon to display at the top of the table (ie 'standard:account')" />
+    <design:attribute name="relatedFieldAPIName" label="Related List Object" datasource="apex://GilmoreLabs_RelatedObjectPicklist" description="Define the related list that references the current object as a parent."  />
+    <design:attribute name="strFields" label="Put the fields here" />
+    <design:attribute name="strObjectLink" label="Optionally specify which field will open the record in the gridview" />
+    <design:attribute name="strWhereClause" label="Put the where clause here" />
+</design:component>

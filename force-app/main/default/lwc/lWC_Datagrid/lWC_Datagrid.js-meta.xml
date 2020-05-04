@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>47.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Datagrid Pack - Datatable</masterLabel>
+    <description>Displays a collection of records in a datatable for selection</description>
+    <targets>
+        <target>lightning__FlowScreen</target>
+    </targets>
+
+<targetConfigs>
+    <targetConfig targets="lightning__FlowScreen" category="some random category">
+        <property name="recordIDsIn" label="01: Record IDs to Display" description="A text array containing the IDs of the records you would like to display in the table." type="string[]" role="inputOnly" required="true" default="[]" />
+        <property name="objAPIName" label="02: Object API Name" type="string" role="inputOnly"  required="true" description="The Object API name being displaying in the table (ie 'Contact', 'Account', 'CustomObject__c')" default="Contact"/>
+        <property name="fieldList" label="03: Fields to Display" type="string" role="inputOnly" required="true" description="A comma seperated list of the field API names to display in the table" default="FirstName,LastName,Title,Email"/>
+        <property name="maxSelection" label="04: Max Selection" type="Integer" role="inputOnly" required="true" default="-1" description="The maximum number of rows the user can select from the table. For single selection, set to 1. For unlimited, set to -1."/>
+        <property name="selectedIDs" label="05: Selected IDs" type="string[]" description="The selected record IDs in the table. As input this functions as pre-selected rows, and as output serves as the user selected Ids"/>
+        <property name="firstSelectedID" label="06: First Selected ID" type="string" role="outputOnly" description="The first recordID selected by the user can be saved to an output text variable (Useful if only allowing a single selection)"/>
+    </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>
