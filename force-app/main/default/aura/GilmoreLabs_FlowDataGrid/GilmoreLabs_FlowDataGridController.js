@@ -29,10 +29,25 @@
         var sortType = event.getParam("type");
         //returns the direction of sorting like asc or desc
         var sortDirection = event.getParam("sortDirection");
+        var showRecord = false;
+
+        if (sortBy == 'show__record')
+        {
+            showRecord = true;
+            sortBy = component.get('v.strObjectLink').toLowerCase();
+            var prevDirection = component.get('v.sortDirection');
+            sortDirection = prevDirection == 'asc' ? 'desc' : 'asc';
+        }
+        
         //Set the sortBy and SortDirection attributes
         component.set("v.sortBy",sortBy);
         component.set("v.sortDirection",sortDirection);
         // call sortData helper function
         helper.sortData(component,sortBy,sortType,sortDirection);
+
+        if (showRecord)
+        {
+            component.set("v.sortBy",'show__record');
+        }
     }
 })

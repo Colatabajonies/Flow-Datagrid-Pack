@@ -4,10 +4,10 @@
    <design:attribute name="strFields" label="03: Field API Names" description="A comma seperated list of the field API names to display in the table" required="true" />
    <design:attribute name="strObjectLink" label="06: Specify which field will open the record in the gridview. Leave blank for none." />
    <design:attribute name="lstpreSelectedIds" label="07: Pre-Selected Rows" description="A text collection containing the IDs of the records you would like pre-selected in the table" />
-   <design:attribute name="sortBy" label="08: Sort By" description="The API name of the field to sort the datatable by. Note this will not work with 'Open Record Column'"/>
+   <design:attribute name="sortBy" label="08: Sort By" description="The API name of the field to sort the datatable by."/>
    <design:attribute name="sortDirection" label="09: Sort Direction" description="The direction of the sorting. Valid options include 'asc' and 'desc'."/>
    
-   <design:attribute name="lstSelectedIds" label="10: Selected Ids (Output)" description="The records selected by the user can be saved to an output array of Ids"/>
+   <design:attribute name="lstSelectedIds" label="10: Selected Ids (Output)" description="The records selected by the user can be saved to an output collection variable of Ids"/>
    <design:attribute name="firstSelectedId" label="11: First Selected Id (Output)" description="The first record selected by the user can be saved to an output text variable (Useful if only allowing a single selection)"/>
    <design:attribute name="maxRowSelection" label="05: Maximum Select Rows" description="The maximum number of rows the user can select from the table. For single selection, set to 1. For unlimited, set to -1." required="true"/>
    <design:attribute name="maxRecords" label="04: Maximum Records" description="The maximum number of records to show in the gridview. For unlimited, set to -1." required="true"/>

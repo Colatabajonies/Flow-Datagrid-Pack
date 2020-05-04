@@ -24,6 +24,11 @@
                        	}
                   	}
                 }
+                cmp.set('v.lstSelectedItems', lstSelectedItems);
+                if (lstSelectedItems.length > 0)
+                {
+                    cmp.set('v.firstSelectedItem', lstSelectedItems[0]);
+                }
                 
             }
             else if (state === "INCOMPLETE") {
