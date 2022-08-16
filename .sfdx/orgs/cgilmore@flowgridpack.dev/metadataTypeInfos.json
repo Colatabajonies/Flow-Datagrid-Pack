@@ -1,29 +1,6 @@
 {
     "sourceApiVersion": "45.0",
     "typeDefs": {
-        "Audience": {
-            "metadataName": "Audience",
-            "isAddressable": true,
-            "isSourceTracked": true,
-            "ext": "audience",
-            "hasContent": false,
-            "defaultDirectory": "audience",
-            "nameForMsgs": "Audience",
-            "nameForMsgsPlural": "Audiences",
-            "contentIsBinary": false,
-            "hasStandardMembers": false,
-            "deleteSupported": true,
-            "decompositionConfig": {
-                "strategy": "nonDecomposed",
-                "workspaceStrategy": "nonDecomposed",
-                "commitStrategy": "fineGrainTracking",
-                "metadataName": "Audience",
-                "useSparseComposition": false,
-                "decompositions": [],
-                "contentStrategy": "nonDecomposedContent"
-            },
-            "hasVirtualSubtypes": false
-        },
         "AppointmentSchedulingPolicy": {
             "metadataName": "AppointmentSchedulingPolicy",
             "isAddressable": true,
@@ -233,6 +210,75 @@
             },
             "hasVirtualSubtypes": false
         },
+        "Icon": {
+            "metadataName": "Icon",
+            "isAddressable": true,
+            "isSourceTracked": true,
+            "ext": "icon",
+            "hasContent": false,
+            "defaultDirectory": "icons",
+            "nameForMsgs": "Icon",
+            "nameForMsgsPlural": "Icons",
+            "contentIsBinary": false,
+            "hasStandardMembers": false,
+            "deleteSupported": true,
+            "decompositionConfig": {
+                "strategy": "nonDecomposed",
+                "workspaceStrategy": "nonDecomposed",
+                "commitStrategy": "fineGrainTracking",
+                "metadataName": "Icon",
+                "useSparseComposition": false,
+                "decompositions": [],
+                "contentStrategy": "nonDecomposedContent"
+            },
+            "hasVirtualSubtypes": false
+        },
+        "BusinessProcessGroup": {
+            "metadataName": "BusinessProcessGroup",
+            "isAddressable": true,
+            "isSourceTracked": true,
+            "ext": "businessProcessGroup",
+            "hasContent": false,
+            "defaultDirectory": "businessProcessGroups",
+            "nameForMsgs": "Business Process Group",
+            "nameForMsgsPlural": "Business Process Groups",
+            "contentIsBinary": false,
+            "hasStandardMembers": false,
+            "deleteSupported": true,
+            "decompositionConfig": {
+                "strategy": "nonDecomposed",
+                "workspaceStrategy": "nonDecomposed",
+                "commitStrategy": "fineGrainTracking",
+                "metadataName": "BusinessProcessGroup",
+                "useSparseComposition": false,
+                "decompositions": [],
+                "contentStrategy": "nonDecomposedContent"
+            },
+            "hasVirtualSubtypes": false
+        },
+        "BusinessProcessFeedbackConfiguration": {
+            "metadataName": "BusinessProcessFeedbackConfiguration",
+            "isAddressable": true,
+            "isSourceTracked": true,
+            "ext": "businessProcessFeedbackConfiguration",
+            "hasContent": false,
+            "defaultDirectory": "businessProcessFeedbackConfigurations",
+            "nameForMsgs": "Business Process Feedback Configuration",
+            "nameForMsgsPlural": "Business Process Feedback Configurations",
+            "contentIsBinary": false,
+            "hasStandardMembers": false,
+            "deleteSupported": true,
+            "decompositionConfig": {
+                "strategy": "nonDecomposed",
+                "workspaceStrategy": "nonDecomposed",
+                "commitStrategy": "fineGrainTracking",
+                "metadataName": "BusinessProcessFeedbackConfiguration",
+                "useSparseComposition": false,
+                "decompositions": [],
+                "contentStrategy": "nonDecomposedContent"
+            },
+            "hasVirtualSubtypes": false
+        },
         "LightningMessageChannel": {
             "metadataName": "LightningMessageChannel",
             "isAddressable": true,
@@ -371,6 +417,52 @@
             },
             "hasVirtualSubtypes": false
         },
+        "RedirectWhitelistUrl": {
+            "metadataName": "RedirectWhitelistUrl",
+            "isAddressable": true,
+            "isSourceTracked": true,
+            "ext": "redirectWhitelistUrl",
+            "hasContent": false,
+            "defaultDirectory": "redirectWhitelistUrls",
+            "nameForMsgs": "Redirect Whitelist Url",
+            "nameForMsgsPlural": "Redirect Whitelist Urls",
+            "contentIsBinary": false,
+            "hasStandardMembers": false,
+            "deleteSupported": true,
+            "decompositionConfig": {
+                "strategy": "nonDecomposed",
+                "workspaceStrategy": "nonDecomposed",
+                "commitStrategy": "fineGrainTracking",
+                "metadataName": "RedirectWhitelistUrl",
+                "useSparseComposition": false,
+                "decompositions": [],
+                "contentStrategy": "nonDecomposedContent"
+            },
+            "hasVirtualSubtypes": false
+        },
+        "IframeWhiteListUrlSettings": {
+            "metadataName": "IframeWhiteListUrlSettings",
+            "isAddressable": true,
+            "isSourceTracked": true,
+            "ext": "iframeWhiteListUrlSettings",
+            "hasContent": false,
+            "defaultDirectory": "iframeWhiteListUrlSettings",
+            "nameForMsgs": "Iframe White List Url Settings",
+            "nameForMsgsPlural": "Iframe White List Url Settingses",
+            "contentIsBinary": false,
+            "hasStandardMembers": false,
+            "deleteSupported": true,
+            "decompositionConfig": {
+                "strategy": "nonDecomposed",
+                "workspaceStrategy": "nonDecomposed",
+                "commitStrategy": "fineGrainTracking",
+                "metadataName": "IframeWhiteListUrlSettings",
+                "useSparseComposition": false,
+                "decompositions": [],
+                "contentStrategy": "nonDecomposedContent"
+            },
+            "hasVirtualSubtypes": false
+        },
         "CustomDataType": {
             "metadataName": "CustomDataType",
             "isAddressable": true,
@@ -457,6 +549,52 @@
                 "workspaceStrategy": "nonDecomposed",
                 "commitStrategy": "fineGrainTracking",
                 "metadataName": "NamedCredential",
+                "useSparseComposition": false,
+                "decompositions": [],
+                "contentStrategy": "nonDecomposedContent"
+            },
+            "hasVirtualSubtypes": false
+        },
+        "InboundNetworkConnection": {
+            "metadataName": "InboundNetworkConnection",
+            "isAddressable": true,
+            "isSourceTracked": true,
+            "ext": "inboundNetworkConnection",
+            "hasContent": false,
+            "defaultDirectory": "inboundNetworkConnections",
+            "nameForMsgs": "Inbound Network Connection",
+            "nameForMsgsPlural": "Inbound Network Connections",
+            "contentIsBinary": false,
+            "hasStandardMembers": false,
+            "deleteSupported": true,
+            "decompositionConfig": {
+                "strategy": "nonDecomposed",
+                "workspaceStrategy": "nonDecomposed",
+                "commitStrategy": "fineGrainTracking",
+                "metadataName": "InboundNetworkConnection",
+                "useSparseComposition": false,
+                "decompositions": [],
+                "contentStrategy": "nonDecomposedContent"
+            },
+            "hasVirtualSubtypes": false
+        },
+        "OutboundNetworkConnection": {
+            "metadataName": "OutboundNetworkConnection",
+            "isAddressable": true,
+            "isSourceTracked": true,
+            "ext": "outboundNetworkConnection",
+            "hasContent": false,
+            "defaultDirectory": "outboundNetworkConnections",
+            "nameForMsgs": "Outbound Network Connection",
+            "nameForMsgsPlural": "Outbound Network Connections",
+            "contentIsBinary": false,
+            "hasStandardMembers": false,
+            "deleteSupported": true,
+            "decompositionConfig": {
+                "strategy": "nonDecomposed",
+                "workspaceStrategy": "nonDecomposed",
+                "commitStrategy": "fineGrainTracking",
+                "metadataName": "OutboundNetworkConnection",
                 "useSparseComposition": false,
                 "decompositions": [],
                 "contentStrategy": "nonDecomposedContent"
@@ -1951,6 +2089,29 @@
                 "workspaceStrategy": "nonDecomposed",
                 "commitStrategy": "fineGrainTracking",
                 "metadataName": "ApexClass",
+                "useSparseComposition": false,
+                "decompositions": [],
+                "contentStrategy": "nonDecomposedContent"
+            },
+            "hasVirtualSubtypes": false
+        },
+        "ApexEmailNotifications": {
+            "metadataName": "ApexEmailNotifications",
+            "isAddressable": true,
+            "isSourceTracked": true,
+            "ext": "notifications",
+            "hasContent": false,
+            "defaultDirectory": "apexEmailNotifications",
+            "nameForMsgs": "Apex Email Notifications",
+            "nameForMsgsPlural": "Apex Email Notificationses",
+            "contentIsBinary": false,
+            "hasStandardMembers": false,
+            "deleteSupported": true,
+            "decompositionConfig": {
+                "strategy": "nonDecomposed",
+                "workspaceStrategy": "nonDecomposed",
+                "commitStrategy": "fineGrainTracking",
+                "metadataName": "ApexEmailNotifications",
                 "useSparseComposition": false,
                 "decompositions": [],
                 "contentStrategy": "nonDecomposedContent"
@@ -4150,14 +4311,15 @@
             },
             "hasVirtualSubtypes": false
         },
-        "FunctionBundle": {
-            "metadataName": "FunctionBundle",
+        "FunctionReference": {
+            "metadataName": "FunctionReference",
             "isAddressable": true,
             "isSourceTracked": true,
-            "hasContent": true,
-            "defaultDirectory": "functionBundles",
-            "nameForMsgs": "Function Bundle",
-            "nameForMsgsPlural": "Function Bundles",
+            "ext": "function",
+            "hasContent": false,
+            "defaultDirectory": "functions",
+            "nameForMsgs": "Function Reference",
+            "nameForMsgsPlural": "Function References",
             "contentIsBinary": false,
             "hasStandardMembers": false,
             "deleteSupported": true,
@@ -4165,7 +4327,7 @@
                 "strategy": "nonDecomposed",
                 "workspaceStrategy": "nonDecomposed",
                 "commitStrategy": "fineGrainTracking",
-                "metadataName": "FunctionBundle",
+                "metadataName": "FunctionReference",
                 "useSparseComposition": false,
                 "decompositions": [],
                 "contentStrategy": "nonDecomposedContent"
@@ -4532,15 +4694,15 @@
             },
             "hasVirtualSubtypes": false
         },
-        "OrderManagementSettings": {
-            "metadataName": "OrderManagementSettings",
+        "ParticipantRole": {
+            "metadataName": "ParticipantRole",
             "isAddressable": true,
             "isSourceTracked": true,
-            "ext": "OrderManagementSettings",
+            "ext": "participantRole",
             "hasContent": false,
-            "defaultDirectory": "OrderManagementSettings",
-            "nameForMsgs": "Order Management Settings",
-            "nameForMsgsPlural": "Order Management Settingses",
+            "defaultDirectory": "participantRoles",
+            "nameForMsgs": "Participant Role",
+            "nameForMsgsPlural": "Participant Roles",
             "contentIsBinary": false,
             "hasStandardMembers": false,
             "deleteSupported": true,
@@ -4548,7 +4710,7 @@
                 "strategy": "nonDecomposed",
                 "workspaceStrategy": "nonDecomposed",
                 "commitStrategy": "fineGrainTracking",
-                "metadataName": "OrderManagementSettings",
+                "metadataName": "ParticipantRole",
                 "useSparseComposition": false,
                 "decompositions": [],
                 "contentStrategy": "nonDecomposedContent"
@@ -4595,6 +4757,75 @@
                 "workspaceStrategy": "nonDecomposed",
                 "commitStrategy": "fineGrainTracking",
                 "metadataName": "paymentGatewayProvider",
+                "useSparseComposition": false,
+                "decompositions": [],
+                "contentStrategy": "nonDecomposedContent"
+            },
+            "hasVirtualSubtypes": false
+        },
+        "MyDomainDiscoverableLogin": {
+            "metadataName": "MyDomainDiscoverableLogin",
+            "isAddressable": true,
+            "isSourceTracked": true,
+            "ext": "myDomainDiscoverableLogin",
+            "hasContent": false,
+            "defaultDirectory": "myDomainDiscoverableLogins",
+            "nameForMsgs": "My Domain Discoverable Login",
+            "nameForMsgsPlural": "My Domain Discoverable Logins",
+            "contentIsBinary": false,
+            "hasStandardMembers": false,
+            "deleteSupported": true,
+            "decompositionConfig": {
+                "strategy": "nonDecomposed",
+                "workspaceStrategy": "nonDecomposed",
+                "commitStrategy": "fineGrainTracking",
+                "metadataName": "MyDomainDiscoverableLogin",
+                "useSparseComposition": false,
+                "decompositions": [],
+                "contentStrategy": "nonDecomposedContent"
+            },
+            "hasVirtualSubtypes": false
+        },
+        "CareProviderSearchConfig": {
+            "metadataName": "CareProviderSearchConfig",
+            "isAddressable": true,
+            "isSourceTracked": true,
+            "ext": "careProviderSearchConfig",
+            "hasContent": false,
+            "defaultDirectory": "careProviderSearchConfigs",
+            "nameForMsgs": "Care Provider Search Config",
+            "nameForMsgsPlural": "Care Provider Search Configs",
+            "contentIsBinary": false,
+            "hasStandardMembers": false,
+            "deleteSupported": true,
+            "decompositionConfig": {
+                "strategy": "nonDecomposed",
+                "workspaceStrategy": "nonDecomposed",
+                "commitStrategy": "fineGrainTracking",
+                "metadataName": "CareProviderSearchConfig",
+                "useSparseComposition": false,
+                "decompositions": [],
+                "contentStrategy": "nonDecomposedContent"
+            },
+            "hasVirtualSubtypes": false
+        },
+        "CareSystemFieldMapping": {
+            "metadataName": "CareSystemFieldMapping",
+            "isAddressable": true,
+            "isSourceTracked": true,
+            "ext": "careSystemFieldMapping",
+            "hasContent": false,
+            "defaultDirectory": "careSystemFieldMappings",
+            "nameForMsgs": "Care System Field Mapping",
+            "nameForMsgsPlural": "Care System Field Mappings",
+            "contentIsBinary": false,
+            "hasStandardMembers": false,
+            "deleteSupported": true,
+            "decompositionConfig": {
+                "strategy": "nonDecomposed",
+                "workspaceStrategy": "nonDecomposed",
+                "commitStrategy": "fineGrainTracking",
+                "metadataName": "CareSystemFieldMapping",
                 "useSparseComposition": false,
                 "decompositions": [],
                 "contentStrategy": "nonDecomposedContent"

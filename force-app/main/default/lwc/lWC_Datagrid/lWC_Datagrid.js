@@ -1,16 +1,15 @@
 import { LightningElement, api, wire, track } from 'lwc';
 import { FlowAttributeChangeEvent, FlowNavigationNextEvent } from 'lightning/flowSupport';
-import getDatatableData from '@salesforce/apex/LWC_DataHelper.getDatatableData';
 import getColumnString from '@salesforce/apex/LWC_DataHelper.getColumnString';
 
 export default class LWC_Datagrid extends LightningElement 
 {
+
+    @api tableData = [];
     @api availableActions = [];
-    @api objAPIName;
     @api fieldList;
-    @api recordIDsIn;
-    @api selectedIDs;
-    @api firstSelectedID;
+    @api selectedRows;
+    @api firstSelected;
     @api maxSelection;
 
     @track isError = true;
@@ -22,75 +21,64 @@ export default class LWC_Datagrid extends LightningElement
     
     @track preSelectedRows = [];
     
-    @wire(getColumnString, {objAPIName: '$objAPIName', fieldList: '$fieldList'})
+    @wire(getColumnString, {tableData: '$tableData', fieldList: '$fieldList'})
     wiredColumns({ error, data })
     {
-        if (data) {
-            //alert(data);
-            this.columns = JSON.parse(data);
-        } else if (error) {
-            //alert('error!');
-            this.isError = true;
-            this.error = error.body.exceptionType + ' - ' + error.body.message;
-            this.selectedIDs = null;
-            this.firstSelectedID = null;
-        }
-    }
-
-    @wire(getDatatableData, {objAPIName: '$objAPIName', fieldList: '$fieldList', recordIDsIn: '$recordIDsIn'})
-    wiredRows({ error, data })
-    {
+        //alert('Calling Get Columns');
         if (data) 
         {
-            //alert('data');
-            this.objData = data;
-            if (this.objData.length > 0) 
+            this.columns = JSON.parse(data);
+            //alert(this.tableData);
+            this.objData = this.tableData;
+            if (this.objData.length > 0)
             {
                 this.isError = false;
                 this.preSelectedRows = [];
-                for (var i=0; i< this.selectedIDs.length; i++)
+                if (this.selectedRows != null)
                 {
-                    this.preSelectedRows.push(this.selectedIDs[i]);
+                    for (var i=0; i< this.selectedRows.length; i++)
+                    {
+                        //alert('Pushing: ' + this.selectedRows[i].FirstName);
+                        this.preSelectedRows.push(this.selectedRows[i].Id);
+                        if (i==0)
+                        {
+                            this.firstSelected = this.selectedRows[0];
+                        }
+                    }
                 }
             }
             else
             {
                 this.isError = true;
-                this.selectedIDs = null;
-                this.firstSelectedID = null;
+                this.selectedRows = null;
+                this.firstSelected = null;
             }
-        } else if (error) 
+        } 
+        else if (error) 
         {
             //alert('error!');
             this.isError = true;
             this.error = error.body.exceptionType + ' - ' + error.body.message;
-            this.selectedIDs = null;
-            this.firstSelectedID = null;
-        }
-        else
-        {
-            //alert('nothing');
-            this.isError = true;
-            this.selectedIDs = null;
-            this.firstSelectedID = null;
+            this.selectedRows = null;
+            this.firstSelected = null;
         }
     }
 
     getSelectedName(event) {
         
-        const selectedRows = event.detail.selectedRows;
-        this.selectedIDs = null;
-        this.firstSelectedID = null;
+        const theSelectedRows = event.detail.selectedRows;
+        this.selectedRows = null;
+        this.firstSelected = null;
         // Display that fieldName of the selected rows
-        for (let i = 0; i < selectedRows.length; i++)
+        for (let i = 0; i < theSelectedRows.length; i++)
         {
             if (i == 0)
             {
-                this.selectedIDs = [];
-                this.firstSelectedID = selectedRows[0].Id;
+                this.selectedRows = [];
+                this.firstSelected = theSelectedRows[0];
             }
-           this.selectedIDs.push(selectedRows[i].Id);
-            //alert("You selected: " + selectedRows[i].name);
+           this.selectedRows.push(theSelectedRows[i]);
+            //alert("You selected: " + theSelectedRows[i].name);
         }
     }
 

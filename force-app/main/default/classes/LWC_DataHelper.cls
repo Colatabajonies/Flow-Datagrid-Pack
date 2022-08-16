@@ -1,36 +1,15 @@
 global with sharing class LWC_DataHelper 
 {
     @AuraEnabled(cacheable=true)
-    public static List<sObject> getDatatableData(string objAPIName, string  fieldList, List<String> recordIDsIn) 
+    public static String getColumnString(List<sObject> tableData, String fieldList) 
     {
-        SObjectType myObjType = Schema.getGlobalDescribe().get(objAPIName);
-        if (myObjType == null)
-        {
-            QueryException e = new QueryException();
-            e.setMessage('Invalid Object: "' + objAPIName + '"');
-            throw e;
-        }
+        System.debug('calling colstring function');
+        //if (tableData == null || tableData.size() == 0)
+        //{
+            //return null;
+        //}
 
-        List<ID> myIDs = new List<ID>();
-        for (string currentID : recordIDsIn)
-        {
-            if (String.isNotBlank(currentID))
-            {
-                myIDs.add(string.escapeSingleQuotes(currentID));
-            }
-        }
-
-        system.debug('name:' + objAPIName + ' fieldList:' + fieldList);
-        fieldList = fieldList.remove(' ').replace(',,', ',').removeEnd(',');
-        system.debug('Running query for fields:' + fieldList);
-        List<sObject> sobjList = Database.query('SELECT ' + string.escapeSingleQuotes(fieldList) + ' FROM ' + string.escapeSingleQuotes(objAPIName) + ' WHERE ID IN:myIDs');
-        system.debug('ran query?');
-        return sobjList;
-    }
-
-    @AuraEnabled(cacheable=true)
-    public static String getColumnString(String objAPIName, String fieldList) 
-    {
+        string objAPIName = tableData[0].getSObjectType().getDescribe().getName();
         string openRecordField = '';
         fieldList = fieldList.remove(' ');
         

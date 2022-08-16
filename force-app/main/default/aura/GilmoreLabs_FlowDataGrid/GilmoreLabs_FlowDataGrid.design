@@ -1,4 +1,4 @@
-<design:component label="Datagrid Pack - Datatable">
+<design:component label="Datagrid Pack (RETIRED) - Datatable">
    <design:attribute name="lstIds" label="01: ID List" description="A text collection containing the IDs of the records you would like to display in the table." required="true" />
    <design:attribute name="strObjectName" label="02: Object API Name" description="The Object API name being displaying in the table" required="true" />
    <design:attribute name="strFields" label="03: Field API Names" description="A comma seperated list of the field API names to display in the table" required="true" />
